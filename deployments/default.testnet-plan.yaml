@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: stacks-streaming-protocol
+            expected-sender: ST3S9E18YKY18RQBR6WVZQ816C19R3FB3K3M0K3XX
+            cost: 1000000
+            path: contracts/stacks-streaming-protocol.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.1"
